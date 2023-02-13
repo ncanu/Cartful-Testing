@@ -29,6 +29,7 @@ function Question() {
     ];
     const [ products, setProducts] = useState(initProducts);
 
+    const backMessage = '< Back';
     const selectOption = (index) => {
         const oldSelection = products[index].isSelected;
         const updatedProducts = [...products].map( item => {return {...item, isSelected: false}});
@@ -45,18 +46,6 @@ function Question() {
 
     return (
         <div className="App">
-            {/*<div className="nav">*/}
-            {/*    <div className="links">*/}
-            {/*    </div>*/}
-
-            {/*    <div className="header-title">The Coffee Shop</div>*/}
-
-            {/*    <div className="logout">*/}
-            {/*        <a className="button-dark" href="">*/}
-            {/*            <FontAwesomeIcon icon="bars" color="#FFFFFF"/>*/}
-            {/*        </a>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
 
             <br />
             <br />
@@ -116,19 +105,22 @@ function Question() {
 
             <div className="footer">
                 <div className="back">
-                    <a className="button-dark" href="">
-                        Back
+                    <a className="blackLink" href="">
+                        {backMessage}
                     </a>
                 </div>
 
                 <div className="header-title">
-                    { userSelection() &&
-                        <Link to="/results">CONTINUE</Link>}
+                    {userSelection() &&
+                        <Link className='whiteLink' to="/results">
+                            <button className="button">CONTINUE</button>
+                        </Link>
+                    }
                 </div>
 
                 <div className="whyItMatters">
-                    <a className="button-dark" href="">
-                        Why it matters
+                    <a className="blackLink" href="">
+                        Why it matters +
                     </a>
                 </div>
             </div>

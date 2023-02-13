@@ -2,6 +2,8 @@
 
 }
 
+
+
 body{
   background-color: #F4EEE5;
 }
@@ -193,6 +195,23 @@ body{
   line-height: 18px;
 }
 
+.whiteLink{
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.blackLink{
+  color: #222222;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 27px;
+}
 
 
 @media only screen and (max-width: 480px) {
