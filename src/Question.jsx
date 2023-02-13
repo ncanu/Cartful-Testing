@@ -13,6 +13,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import {useState} from "react";
 import {Link} from "react-router-dom";
+import tasting from "./assets/tasting-notes.svg";
 
 library.add(faBars);
 
@@ -71,7 +72,7 @@ function Question() {
 
             <br />
 
-            <div className="containerCards">
+            <div className="containerCards" id='productList'>
 
                 {
                     products.map( (product, index) => {
@@ -96,6 +97,28 @@ function Question() {
 
 
             </div>
+
+            <div id="productListMobile">
+                {
+                    products.map( (product, index) => {
+                        let updatedStyle;
+
+                        if(userSelection()){
+                            updatedStyle = product.isSelected ? product.style : {...product.style, backgroundColor: '#E9E4DB', color: '#222222'};
+                        } else {
+                            updatedStyle = product.style;
+                        }
+
+                        return <div key={product.name} className='detailsMobile' style={{...updatedStyle, transform:  "rotate(0deg)"}}
+                                    onClick={() => selectOption(index)}>
+                            <img src={product.img} alt="React Logo" className="center" style={product.style} />
+                            {product.name}
+                        </div>
+                    })
+                }
+
+            </div>
+
 
             <br />
             <br />

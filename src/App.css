@@ -214,7 +214,7 @@ body{
 }
 
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   body {
   }
   .links{
@@ -228,10 +228,14 @@ body{
     font-size: 24px;
     line-height: 150%;
   }
+  #productList{
+    display: none;
+  }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 768px){
-  body {
-  }
+@media only screen and (min-width: 769px) {
 
+  #productListMobile{
+    display: none;
+  }
 }
