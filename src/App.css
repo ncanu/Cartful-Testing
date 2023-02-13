@@ -8,7 +8,7 @@ body{
 
 .nav {
   display: flex;
-  height: 300px;      /* optional; just for demo */
+  height: 220px;      /* optional; just for demo */
   background: #222222;
 }
 

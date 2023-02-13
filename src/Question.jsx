@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import {useState} from "react";
+import {Link} from "react-router-dom";
 
 library.add(faBars);
 
@@ -44,18 +45,18 @@ function Question() {
 
     return (
         <div className="App">
-            <div className="nav">
-                <div className="links">
-                </div>
+            {/*<div className="nav">*/}
+            {/*    <div className="links">*/}
+            {/*    </div>*/}
 
-                <div className="header-title">The Coffee Shop</div>
+            {/*    <div className="header-title">The Coffee Shop</div>*/}
 
-                <div className="logout">
-                    <a className="button-dark" href="">
-                        <FontAwesomeIcon icon="bars" color="#FFFFFF"/>
-                    </a>
-                </div>
-            </div>
+            {/*    <div className="logout">*/}
+            {/*        <a className="button-dark" href="">*/}
+            {/*            <FontAwesomeIcon icon="bars" color="#FFFFFF"/>*/}
+            {/*        </a>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
 
             <br />
             <br />
@@ -121,7 +122,8 @@ function Question() {
                 </div>
 
                 <div className="header-title">
-                    { userSelection() && <button className="button">CONTINUE</button>}
+                    { userSelection() &&
+                        <Link to="/results">CONTINUE</Link>}
                 </div>
 
                 <div className="whyItMatters">
