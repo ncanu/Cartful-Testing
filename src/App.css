@@ -175,12 +175,28 @@ body{
   margin-left: 30px;
 }
 
+.button {
+  background-color: #222222;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+}
 
 
 
 @media only screen and (max-width: 480px) {
   body {
-    background-color: lightblue;
   }
   .links{
     flex: 0;
@@ -197,7 +213,6 @@ body{
 
 @media only screen and (min-width: 481px) and (max-width: 768px){
   body {
-    background-color: red;
   }
 
 }
